@@ -23,7 +23,6 @@ def GetHuStock():
 
 def DownloadStock(start=20010101,end=20191220):
     stocks = GetHuStock()
-    i=0
     for stock in stocks:
         print("正在下载：" + stock, end="")
         params = {
@@ -59,6 +58,5 @@ def DownloadStock(start=20010101,end=20191220):
             print("\r" + stock + "下载成功")
         else:
             print("\r" + stock + "下载失败")
-        i += 1
 
 DownloadStock(20000101,20191220)
