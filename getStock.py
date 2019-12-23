@@ -1,9 +1,6 @@
 import bs4 as bs
-import requests#python的http客户端
-import pickle#用于序列化反序列化
+import requests
 import re
-import json
-import time
 import os
 
 def GetHuStock():
@@ -63,7 +60,5 @@ def DownloadStock(start=20010101,end=20191220):
         else:
             print("\r" + stock + "下载失败")
         i += 1
-        if i % 3 == 0:
-            #time.sleep(3)
-            i=0
+
 DownloadStock(20000101,20191220)
