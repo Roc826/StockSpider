@@ -54,7 +54,7 @@ def DownloadStock(start=20010101,end=20191220):
                 os.makedirs(path)
             filename = path + stock + "_" + stocks[stock] + ".csv"
             with open(filename,"wb") as file:
-                file.write(res.content)
+                file.write(res.content.decode("GB18030").encode("utf-8"))
         except BaseException:
             print("\r" + stock + "下载错误")
             continue
